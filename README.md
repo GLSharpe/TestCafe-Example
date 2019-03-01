@@ -4,12 +4,10 @@ Simple demo of tests on TestCafe.
 ## Background
 
 This is a TestCafe self training suite.
-The purpose of this document is to provide some structure for self-learning around TestCafe Studio and basic automation in JavaScript.   It assumes that you have a basic grounding in JavaScript so if you don’t have a background in this then look 
+The purpose of this document is to provide some structure for self-learning around TestCafe and basic automation in JavaScript.   It assumes that you have a basic grounding in JavaScript so if you don’t have a background in this then look 
 at a basic JavaScript course and then return to this document: [1]  
 
-All of the automation will be performed against the front page of the trainline website, as this has a combination of basic and more complex challenges.  
-
-The examples will be done against The Trainline site [2].  
+All of the automation will be performed against the home page of the trainline website, as this has a combination of basic and more complex challenges [2].  
 (If anyone finds any errors in this document please correct them)
 
 ## Learning Points
@@ -35,14 +33,13 @@ If not, then Visual Studio Code is a perfectly fine place for you to write your 
 
 ## Setup 
 
-The way that you arrange your files within the project is up to you. If you have a look in the examples file in [3] then you can see that each example is set out slightly differently. However, if you were to look at the example project: [5]  
- it has a more object-oriented style with one folder containing page objects and one folder containing test classes.  
+The way that you arrange your files within the project is up to you. If you have a look in the examples file in [3] then you can see that each example is set out slightly differently. However, if you were to look at the example project: [5] it has a more object-oriented style with one folder containing page objects and one folder containing test classes.  
  
 When you create separate JavaScript files it is always a good idea to import/export to other files as you create and initialize them as it is an easy thing to forget to do further down the line.
 
 ## Writing Tests
 
-All tests must be contained inside a test fixture which contains a description of the test fixture and a ‘page’ feature with a URL. For example, if you were to want to run some tests on the TrainLine website you would start off the JavaScript file with the imports from the other pages that you wish to use and then you would begin the test fixture with:
+All tests must be contained inside a test fixture which contains a description and a ‘page’ feature with a URL. For example, if you were to want to run some tests on the TrainLine website you would start off the JavaScript file with the imports from the other pages that you wish to use and then you would begin the test fixture with:
 
 ``` 
 fixture `Tests on the home page of the TrainLine website `
@@ -64,7 +61,7 @@ test('Radio Buttons Check', async t =>{
     })
 ```
 (N.B. the variables are initialized on another file that I have imported as “homePage”).
-The using “expect” is a great way to generate an assertion and it can be deployed in several different ways. More information can be found here: [7]  
+Using “expect” is a great way to generate an assertion and it can be deployed in several different ways. More information can be found here: [7]  
 
 If there is something a bit more specific that you wish to check and find that the expect feature doesn’t quite have the functionality that you require then you can look at installing expect.js: [8]  
 
@@ -76,7 +73,7 @@ To use the Selector feature you need to first use the import:
 
 at the top of each file you intend to use selectors on.
 
-For there, using simple selectors in TestCafe are very easy, if an element has a ID (e.g. id = “elementId”) or a unique class (e.g. class = “elementClass”) affixed to it it then it is simply a matter of declaring the variables as follows:
+For there, using simple selectors in TestCafe are very easy, if an element has an ID (e.g. id = “elementId”) or a unique class (e.g. class = “elementClass”) affixed to it it then it is simply a matter of declaring the variables as follows:
 
 ```
 const elementById = Selector('#elementId')
@@ -105,13 +102,13 @@ There are many different ways to use Selectors and they can be found here: [9]
 
 ### TestCafe Studios
 
-To run tests for TestCafe studio just click the blue ‘run button next to the test file.
+To run tests for TestCafe studio just click the blue 'run' button next to the test file.
 
 To only run specific tests within the file then you can click the drop down by the file to display all the tests within it. You can then select specific tests to run, each of which will display the same run button when you hover over them.
 
 ### Command Line
 
-Running the tests from a command prompt is as simple as declaring a “testcafe” operation, declaring the browser or browsers and then pointing it in the direction of the file containing the tests. To run a test suite called “homepage.js” in chrome navigate to the folder containing the file and enter “testcafe chrome hompage.js.  
+Running the tests from a command prompt is as simple as declaring a “testcafe” operation, declaring the browser or browsers and then pointing it in the direction of the file containing the tests. To run a test suite called “homepage.js” in chrome navigate to the folder containing the file and enter `testcafe chrome hompage.js`.  
 
 There are many specific cases where you would not just wish to plainly run all the tests of 1 file so please see the below link for a comprehensive look at the ways to use the command prompt to run your tests: [10]
 
@@ -128,16 +125,16 @@ Hints can be found at the bottom of the document
 
 ### Ex 0.1
 
-Once you have TestCafe installed, create a folder with 2 JavaScript files in calling one “homepage” and one “examples”.
+Once you have TestCafe installed, create a folder containing 2 JavaScript files, calling one “homepage” and one “examples”.
 
 ### Ex 0.2
 
-Import the “Selector” function from TestCafe into both files and import “t”, the TestController from TestCafe in homepage.
+Import the “Selector” function from TestCafe into both files and import “t”, the TestController, from TestCafe in homepage.
 (Hint available) 
 
 ### Ex 0.3
 
-Create an exportable class inside your homepage file called Homepage and add a constructor as you would with any JavaScript file {link}. Inside the constructor, add a variable called “baseUrl” and set it to the url of the Trainline. Then go to the examples file and import “HomePage” from the location of the homepage file. Then create a new instance of HomePage called “homePage”.  
+Create an exportable class inside your homepage file called Homepage and add a constructor as you would with any JavaScript file ([1]). Inside the constructor, add a variable called “baseUrl” and set it to the url of the Trainline. Then go to the examples file and import “HomePage” from the location of the homepage file. Then create a new instance of HomePage called “homePage”.  
 (Hint available)
 
 ### Ex 0.4
@@ -149,30 +146,41 @@ Create a test fixture, it can have any title you want but it should point to the
 
 Go to the trainline website and find the “From” and “To” search boxes.  
  
-Within the constructor in the homepage file, use Selectors to find these objects and call them “fromLocation” and “toLocation”. From now on, add all page objects into this constructor.
+Within the constructor in the homepage file, use Selectors to find these objects and call them “fromLocation” and “toLocation”. From now on, add all page objects into this constructor.  
+(Hint available)
+
+
+Ok, the files are all set up for you to start writing tests.  
+You can find the solutions to all examples at the bottom of the document.  
+If you wish to add more exercises, then feel free.  
+Solutions to these exercises are in the saved
+
 
 ### Ex 1.1
 
 Create a test, titled whatever you like, that:
 
 * Navigates to the webpage.
-* Enters the text “London Bridge” into the From field and, if there is a drop down, selects the top option in the drop down.
-* Enter the text “Brighton” into the To field and, if there is a drop down, selects the top option in the drop down.
+* Enters the text “London Bridge” into the From field and then picks the top option from the drop down.
+* Enter the text “Brighton” into the To field and then picks the top option from the drop down.
 * Clicks on the “Get Times and Tickets” button.
 * Checks that the title of the next page contains the string “Trainline”.
 
-Write this test linearly, one step after the other without creating any supporting methods. 
+Write this test linearly, one step after the other without creating any supporting methods.  
+(Hint available)
 
 ### Ex 1.2
 
-Create a test that does the same function as above, but this time create 2 supporting methods in the homepage file that both receive 1 argument. One method should enter the argument into the From box and then, if there is a drop down, picks the top option. Call it “enterFromLocation”.  
-The other method should enter the argument into the To box and then, if there is a drop down, picks the top option. Call it “enterToLocation”.  
-Use these methods in the test.
+Create a test that does the same function as above, but this time create 2 supporting methods in the 'homepage.js' file that both receive 1 argument. One method should enter the argument into the From box and then picks the top option from the drop down. Call it “enterFromLocation”.  
+The other method should enter the argument into the To box and then picks the top option from the drop down. Call it “enterToLocation”.  
+Use these methods in the test.  
+(Hint available)
 
 ### Ex 1.3
 
 Create another test that does the same function as the 2 above, but now create another method in the homepage file that takes 2 arguments. This method should pass in the first argument to the enterFromLocation method and the second into the enterToLocation and call this method “enterLocations”.  
-Use this method in the test.
+Use this method in the test.  
+(Hint available)
 
 ### Ex 2
 
@@ -196,7 +204,7 @@ Create a test, titled whatever you like, that:
 * Clicks the “Return” radio button.
 * Clicks the “Tomorrow” button to set the out-bound date as tomorrow.
 * Clicks the “Next Day” button to set the in-bound date as the day after tomorrow.
-* Create a method in that checks that the date displayed in the in-bound date field is truly the day after the date displayed in the out-bound field. Let this method return a Boolean value and expect this value to be returned as true. (You can change the setup around and put in different values to test your method).
+* Create a method in homepage.js that checks that the date displayed in the in-bound date field is truly the day after the date displayed in the out-bound field. Let this method return a Boolean value and expect this value to be returned as true. (You can change the setup around and put in different values to test your method).
 
 ## Links
 
@@ -262,7 +270,7 @@ fixture `Example tests`
 
 ### Ex 0.5
 
-At the point of writing this the id’s contained full stops so were found using the method shown in the NB in the Using Selectors section.
+At the point of writing this the id’s contained full stops so were selected using the method shown in the NB in the Using Selectors section.
 ```
 export default class HomePage {
     constructor (){
@@ -270,8 +278,7 @@ export default class HomePage {
         this.fromLocation = Selector("[id='from.text']");
         this.toLocation = Selector("[id='to.text'");       
     }
-```
-
+```  
 
 ### Ex 1.1
 
