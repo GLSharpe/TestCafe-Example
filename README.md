@@ -22,6 +22,7 @@ All of the automation will be performed against the home page of the trainline w
 * Different Browsers
 * Examples
 * Links
+* Hints
 
 ## Installation
 
