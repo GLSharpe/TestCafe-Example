@@ -69,7 +69,8 @@ For there, using simple selectors in TestCafe are very easy, if an element has a
 
 ```const elementById = Selector('#elementId')
 
-const elementByClass = Selector('.elementClass') ```
+const elementByClass = Selector('.elementClass')
+```
 
 
 To find an element that has another unique feature affixed to it (e.g. a div with an attribute “name” with a value “myDivElement”) then it can be found using:
