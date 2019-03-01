@@ -1,0 +1,16 @@
+{
+  "name": "trainline",
+  "version": "1.0.0",
+  "description": "example testcafe test suite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "example",
+    "testcafe",
+    "trainline"
+  ],
+  "author": "George Sharpe",
+  "license": "ISC"
+}
