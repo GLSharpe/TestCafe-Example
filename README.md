@@ -4,8 +4,8 @@ Simple demo of tests on TestCafe.
 ## Background
 
 This is a TestCafe self training suite.
-The purpose of this document is to provide some structure for self-learning around TestCafe Studio and basic automation in JavaScript. It assumes that you have a basic grounding in JavaScript so if you don’t have a background in this then look 
-at a basic JavaScript course and then return to this document: [1]
+The purpose of this document is to provide some structure for self-learning around TestCafe Studio and basic automation in JavaScript.   It assumes that you have a basic grounding in JavaScript so if you don’t have a background in this then look 
+at a basic JavaScript course and then return to this document: [1]  
 All of the automation will be performed against the front page of the trainline website, as this has a combination of basic and more complex challenges.
 The examples will be done against The Trainline site [2].
 (If anyone finds any errors in this document please correct them)
@@ -24,14 +24,14 @@ The examples will be done against The Trainline site [2].
 ## Installation
 
 All of the installation details can be found in link [3].
-If you were to read through this document, it should give you a good overview of the tool as a whole and all the instructions to get it up and running (Note that “Getting Started” is 3rd on the Table of Contents so if you’re reading the page and think “have I missed something?”, you havent).
-It is also recommended that you download the TestCafe Studio IDE for this. I would recommend at least trying it: [4]
+If you were to read through this document, it should give you a good overview of the tool as a whole and all the instructions to get it up and running (Note that “Getting Started” is 3rd on the Table of Contents so if you’re reading the page and think “have I missed something?”, you havent).  
+It is also recommended that you download the TestCafe Studio IDE for this. I would recommend at least trying it: [4]  
 If not, then Visual Studio Code is a perfectly fine place for you to write your code.
 
 ## Setup 
 
-The way that you arrange your files within the project is up to you. If you have a look in the examples file in [3] then you can see that each example is set out slightly differently. However, if you were to look at the example project: [5]
- it has a more object-oriented style with one folder containing page objects and one folder containing test classes. 
+The way that you arrange your files within the project is up to you. If you have a look in the examples file in [3] then you can see that each example is set out slightly differently. However, if you were to look at the example project: [5]  
+ it has a more object-oriented style with one folder containing page objects and one folder containing test classes.  
 When you create separate JavaScript files it is always a good idea to import/export to other files as you create and initialize them as it is an easy thing to forget to do further down the line.
 
 ## Writing Tests
@@ -43,7 +43,7 @@ fixture `Tests on the home page of the TrainLine website `
     .page(homePage.baseUrl); 
 ```
 
-After the fixture has been opened, you can then start writing your tests. The syntax for this is standard. This involves calling “async/await” functions so if this is something that you haven’t investigated them it will be worth looking into it now. More info can be found here: [6]
+After the fixture has been opened, you can then start writing your tests. The syntax for this is standard. This involves calling “async/await” functions so if this is something that you haven’t investigated them it will be worth looking into it now. More info can be found here: [6]  
 When you create an initialise a test, you set the title of the test as the first parameter and the function as the second. For example, if you wanted to run a test where there were 3 radio buttons, you clicked on them all one after the other and then checked that the final one you clicked on was the one that was check:
 
 ```
@@ -57,8 +57,8 @@ test('Radio Buttons Check', async t =>{
     })
 ```
 (N.B. the variables are initialized on another file that I have imported as “homepage”).
-The using “expect” is a great way to generate an assertion and it can be deployed in several different ways. More information can be found here: [7]
-If there is something a bit more specific that you wish to check and find that the expect feature doesn’t quite have the functionality that you require then you can look at installing expect.js: [8]
+The using “expect” is a great way to generate an assertion and it can be deployed in several different ways. More information can be found here: [7]  
+If there is something a bit more specific that you wish to check and find that the expect feature doesn’t quite have the functionality that you require then you can look at installing expect.js: [8]  
 
 ## Using Selectors
 
@@ -85,7 +85,8 @@ N.B. if you wish to find an element by an id or a class but it contains syntacti
 
 ```const elementByIdAttribute = Selector("[id='strange.id']")```
 
-To find elements by more complicated selectors you can use a standard CSS selector chain, like one that you can copy from the dev tools (but never copy from dev tools!!!). So, for example, if there were to be an element that was a list element contained in a list with a parent element with a unique id (e.g. id = “anotherElementId”) then you could select it by:
+To find elements by more complicated selectors you can use a standard CSS selector chain, like one that you can copy from the dev tools (but never copy from dev tools!!!).  
+So, for example, if there were to be an element that was a list element contained in a list with a parent element with a unique id (e.g. id = “anotherElementId”) then you could select it by:
 
 ```const elementBySelectorChain = Selector('#anotherElementId > ul > li:nth-child([index])')```
 
@@ -101,7 +102,7 @@ To only run specific tests within the file then you can click the drop down by t
 
 ### Command Line
 
-Running the tests from a command prompt is as simple as declaring a “testcafe” operation, declaring the browser or browsers and then pointing it in the direction of the file containing the tests. To run a test suite called “homepage.js” in chrome navigate to the folder containing the file and enter “testcafe chrome hompage.js.
+Running the tests from a command prompt is as simple as declaring a “testcafe” operation, declaring the browser or browsers and then pointing it in the direction of the file containing the tests. To run a test suite called “homepage.js” in chrome navigate to the folder containing the file and enter “testcafe chrome hompage.js.  
 There are many specific cases where you would not just wish to plainly run all the tests of 1 file so please see the below link for a comprehensive look at the ways to use the command prompt to run your tests: [10]
 
 ## Different Browsers
@@ -112,7 +113,7 @@ If you’re running TastCafe from a command prompt then the browser is determine
 
 ## Exercises
 
-A few simple exercises that will help you get to grips with writing tests in TestCafe. This should take you from the set up to the running of the tests. 
+A few simple exercises that will help you get to grips with writing tests in TestCafe. This should take you from the set up to the running of the tests.  
 Hints can be found at the bottom of the document
 
 ### Ex 0.1
@@ -126,17 +127,17 @@ Import the “Selector” function from TestCafe into both files and import “t
 
 ### Ex 0.3
 
-Create an exportable class inside your homepage file called Homepage and add a constructor as you would with any JavaScript file {link}. Inside the constructor, add a variable called “baseUrl” and set it to the url of the Trainline. Then go to the examples file and import “HomePage” from the location of the homepage file. Then create a new instance of HomePage called “homePage”.
+Create an exportable class inside your homepage file called Homepage and add a constructor as you would with any JavaScript file {link}. Inside the constructor, add a variable called “baseUrl” and set it to the url of the Trainline. Then go to the examples file and import “HomePage” from the location of the homepage file. Then create a new instance of HomePage called “homePage”.  
 (Hint available)
 
 ### Ex 0.4
 
-Create a test fixture, it can have any title you want but it should point to the base url of the Trainline.
+Create a test fixture, it can have any title you want but it should point to the base url of the Trainline.  
 (Hint available)
 
 ### Ex 0.5
 
-Go to the trainline website and find the “From” and “To” search boxes.
+Go to the trainline website and find the “From” and “To” search boxes.  
  
 Within the constructor in the homepage file, use Selectors to find these objects and call them “fromLocation” and “toLocation”. From now on, add all page objects into this constructor.
 
@@ -154,11 +155,14 @@ Write this test linearly, one step after the other without creating any supporti
 
 ### Ex 1.2
 
-Create a test that does the same function as above, but this time create 2 supporting methods in the homepage file that both receive 1 argument. One method should enter the argument into the From box and then, if there is a drop down, picks the top option. Call it “enterFromLocation”. The other method should enter the argument into the To box and then, if there is a drop down, picks the top option. Call it “enterToLocation”. Use these methods in the test.
+Create a test that does the same function as above, but this time create 2 supporting methods in the homepage file that both receive 1 argument. One method should enter the argument into the From box and then, if there is a drop down, picks the top option. Call it “enterFromLocation”.  
+The other method should enter the argument into the To box and then, if there is a drop down, picks the top option. Call it “enterToLocation”.  
+Use these methods in the test.
 
 ### Ex 1.3
 
-Create another test that does the same function as the 2 above, but now create another method in the homepage file that takes 2 arguments. This method should pass in the first argument to the enterFromLocation method and the second into the enterToLocation and call this method “enterLocations”. Use this method in the test.
+Create another test that does the same function as the 2 above, but now create another method in the homepage file that takes 2 arguments. This method should pass in the first argument to the enterFromLocation method and the second into the enterToLocation and call this method “enterLocations”.  
+Use this method in the test.
 
 ### Ex 2
 
