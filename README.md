@@ -44,7 +44,8 @@ All tests must be contained inside a test fixture which contains a description o
 After the fixture has been opened, you can then start writing your tests. The syntax for this is standard. This involves calling “async/await” functions so if this is something that you haven’t investigated them it will be worth looking into it now. More info can be found here: [6]
 When you create an initialise a test, you set the title of the test as the first parameter and the function as the second. For example, if you wanted to run a test where there were 3 radio buttons, you clicked on them all one after the other and then checked that the final one you clicked on was the one that was check:
 
-```test('Radio Buttons Check', async t =>{
+```
+test('Radio Buttons Check', async t =>{
 
     await t
         .click(homePage.returnRadioButton)
@@ -67,7 +68,8 @@ at the top of each file you intend to use selectors on.
 
 For there, using simple selectors in TestCafe are very easy, if an element has a ID (e.g. id = “elementId”) or a unique class (e.g. class = “elementClass”) affixed to it it then it is simply a matter of declaring the variables as follows:
 
-```const elementById = Selector('#elementId')
+```
+const elementById = Selector('#elementId')
 
 const elementByClass = Selector('.elementClass')
 ```
@@ -208,19 +210,23 @@ In example.js:
 ### Ex 0.3
 
 In homepage.js:
-```import { Selector, t} from "testcafe";
+```
+import { Selector, t} from "testcafe";
 
 export default class HomePage {
     constructor (){
         this.baseUrl = 'https://www.thetrainline.com/';        
-   } ```
+   }
+```
 
 In examples.js:
 
-```import HomePage from './homepage.js';
+```
+import HomePage from './homepage.js';
 import { Selector } from "testcafe";
 
-const homePage = new HomePage(); ```
+const homePage = new HomePage();
+```
 
 
 ### Ex 0.4
@@ -228,24 +234,28 @@ const homePage = new HomePage(); ```
 HINT:
 Look back into the “Writing a Test” section.
 In examples.js:
-```import HomePage from './homepage.js';
+```
+import HomePage from './homepage.js';
 import { Selector } from "testcafe";
 
 const homePage = new HomePage();
 
 fixture `Example tests`
-    .page(homePage.baseUrl); ```
+    .page(homePage.baseUrl);
+```
 
 
 ### Ex 0.5
 
 At the point of writing this the id’s contained full stops so were found using the method shown in the NB in the Using Selectors section.
-```export default class HomePage {
+```
+export default class HomePage {
     constructor (){
         this.baseUrl = 'https://www.thetrainline.com/';
         this.fromLocation = Selector("[id='from.text']");
         this.toLocation = Selector("[id='to.text'");       
-    } ```
+    }
+```
 
 
 ### Ex 1.1
