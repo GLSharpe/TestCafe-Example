@@ -7,7 +7,7 @@ This is a TestCafe self training suite.
 The purpose of this document is to provide some structure for self-learning around TestCafe and basic automation in JavaScript.   It assumes that you have a basic grounding in JavaScript so if you don’t have a background in this then look 
 at a basic JavaScript course and then return to this document: [1]   
 
-![alt text](https://github.com/GLSharpe/TestCafe-Example/tree/master/support/images/homepage.png)
+![homepage](https://user-images.githubusercontent.com/43884592/53645072-0286db80-3c30-11e9-91c5-4bcc9b5348c5.png)
 
 All of the automation will be performed against the home page of the trainline website, as this has a combination of basic and more complex challenges [2].  
 (If anyone finds any errors in this document please correct them)
@@ -106,7 +106,7 @@ There are many different ways to use Selectors and they can be found here: [9]
 
 To run tests for TestCafe studio just click the blue 'run' button next to the test file:  
 
-![alt text](https://github.com/GLSharpe/TestCafe-Example/tree/master/support/images/testrun.png)
+![testrun](https://user-images.githubusercontent.com/43884592/53645171-36620100-3c30-11e9-82a2-2fda774efcc4.png)
 
 To only run specific tests within the file then you can click the drop down by the file to display all the tests within it. You can then select specific tests to run, each of which will display the same run button when you hover over them.
 
@@ -119,7 +119,7 @@ There are many specific cases where you would not just wish to plainly run all t
 ## Different Browsers
 
 If you’re using the TestCafe Studio IDE then the browser can be changed using the drop downs at the top:  
-![alt text](https://github.com/GLSharpe/TestCafe-Example/tree/master/support/images/browsers.png)
+![browsers](https://user-images.githubusercontent.com/43884592/53645216-4c6fc180-3c30-11e9-8a10-17052b912bc2.png)
 
 If you’re running TastCafe from a command prompt then the browser is determined by the second argument, see the Running Tests section for more details.
 
@@ -151,7 +151,7 @@ Create a test fixture, it can have any title you want but it should point to the
 
 Go to the trainline website and find the “From” and “To” search boxes:  
 
-![alt text](https://github.com/GLSharpe/TestCafe-Example/tree/master/support/images/tofrombox.png)
+![tofrombox](https://user-images.githubusercontent.com/43884592/53645245-5bef0a80-3c30-11e9-9a1c-60e58d97ce61.png)
 
  
 Within the constructor in the homepage file, use Selectors to find these objects and call them “fromLocation” and “toLocation”. From now on, add all page objects into this constructor.  
