@@ -12,14 +12,14 @@ The examples will be done against The Trainline site [2].
 
 ## Learning Points
 
- Markup : * Installations
-          * Project Setup
-          * Writing Tests
-          * Using Selectors
-          * Running Tests
-          * Different Browsers
-          * Examples
-          * Links
+* Installations
+* Project Setup
+* Writing Tests
+* Using Selectors
+* Running Tests
+* Different Browsers
+* Examples
+* Links
 
 ## Installation
 
@@ -175,12 +175,12 @@ The last point in fairly nonspecific, but if you were to find an element that we
 
 Create a test, titled whatever you like, that:
 
- Markup : * Navigates to the webpage.
-          * Uses your “enterLocations” method to search for a train from London Bridge to Brighton.
-          * Clicks the “Return” radio button.
-          * Clicks the “Tomorrow” button to set the out-bound date as tomorrow.
-          * Clicks the “Next Day” button to set the in-bound date as the day after tomorrow.
-          * Create a method in that checks that the date displayed in the in-bound date field is truly the day after the date displayed in the out-bound field. Let this method return a Boolean value and expect this value to be returned as true. (You can change the setup around and put in different values to test your method).
+* Navigates to the webpage.
+* Uses your “enterLocations” method to search for a train from London Bridge to Brighton.
+* Clicks the “Return” radio button.
+* Clicks the “Tomorrow” button to set the out-bound date as tomorrow.
+* Clicks the “Next Day” button to set the in-bound date as the day after tomorrow.
+* Create a method in that checks that the date displayed in the in-bound date field is truly the day after the date displayed in the out-bound field. Let this method return a Boolean value and expect this value to be returned as true. (You can change the setup around and put in different values to test your method).
 
 ## Links
 
@@ -231,7 +231,6 @@ const homePage = new HomePage();
 
 ### Ex 0.4
 
-HINT:
 Look back into the “Writing a Test” section.
 In examples.js:
 ```
