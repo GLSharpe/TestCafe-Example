@@ -142,11 +142,11 @@ Within the constructor in the homepage file, use Selectors to find these objects
 
 Create a test, titled whatever you like, that:
 
- Markup : * Navigates to the webpage.
-          * Enters the text “London Bridge” into the From field and, if there is a drop down, selects the top option in the drop down.
-          * Enter the text “Brighton” into the To field and, if there is a drop down, selects the top option in the drop down.
-          * Clicks on the “Get Times and Tickets” button.
-          * Checks that the title of the next page contains the string “Trainline”.
+* Navigates to the webpage.
+* Enters the text “London Bridge” into the From field and, if there is a drop down, selects the top option in the drop down.
+* Enter the text “Brighton” into the To field and, if there is a drop down, selects the top option in the drop down.
+* Clicks on the “Get Times and Tickets” button.
+* Checks that the title of the next page contains the string “Trainline”.
 
 Write this test linearly, one step after the other without creating any supporting methods. 
 
@@ -162,11 +162,11 @@ Create another test that does the same function as the 2 above, but now create a
 
 Create a test, titled whatever you like, that:
 
- Markup : * Navigates to the webpage.
-          * Checks that the title of the next page contains the string “Trainline”.
-          * Uses your “enterLocations” method to search for a train from London Bridge to Brighton.
-          * Clicks on the “Get Times and Tickets” button.
-          * Checks that the results page is shown.
+* Navigates to the webpage.
+* Checks that the title of the next page contains the string “Trainline”.
+* Uses your “enterLocations” method to search for a train from London Bridge to Brighton.
+* Clicks on the “Get Times and Tickets” button.
+* Checks that the results page is shown.
 
 The last point in fairly nonspecific, but if you were to find an element that were to only feature in the results page and ensure that it’s there (or ‘expect’ it to ‘exist’ if you like) then that should be sufficient for now.
           
