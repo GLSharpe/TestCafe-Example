@@ -38,9 +38,10 @@ When you create separate JavaScript files it is always a good idea to import/exp
 
 All tests must be contained inside a test fixture which contains a description of the test fixture and a ‘page’ feature with a URL. For example, if you were to want to run some tests on the TrainLine website you would start off the JavaScript file with the imports from the other pages that you wish to use and then you would begin the test fixture with:
 
-``` fixture `Tests on the home page of the TrainLine website `
-
-    .page(homePage.baseUrl); ```
+``` 
+fixture `Tests on the home page of the TrainLine website `
+    .page(homePage.baseUrl); 
+```
 
 After the fixture has been opened, you can then start writing your tests. The syntax for this is standard. This involves calling “async/await” functions so if this is something that you haven’t investigated them it will be worth looking into it now. More info can be found here: [6]
 When you create an initialise a test, you set the title of the test as the first parameter and the function as the second. For example, if you wanted to run a test where there were 3 radio buttons, you clicked on them all one after the other and then checked that the final one you clicked on was the one that was check:
