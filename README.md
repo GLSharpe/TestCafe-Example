@@ -6,8 +6,10 @@ Simple demo of tests on TestCafe.
 This is a TestCafe self training suite.
 The purpose of this document is to provide some structure for self-learning around TestCafe Studio and basic automation in JavaScript.   It assumes that you have a basic grounding in JavaScript so if you don’t have a background in this then look 
 at a basic JavaScript course and then return to this document: [1]  
-All of the automation will be performed against the front page of the trainline website, as this has a combination of basic and more complex challenges.
-The examples will be done against The Trainline site [2].
+
+All of the automation will be performed against the front page of the trainline website, as this has a combination of basic and more complex challenges.  
+
+The examples will be done against The Trainline site [2].  
 (If anyone finds any errors in this document please correct them)
 
 ## Learning Points
@@ -23,15 +25,19 @@ The examples will be done against The Trainline site [2].
 
 ## Installation
 
-All of the installation details can be found in link [3].
+All of the installation details can be found in link [3].  
+
 If you were to read through this document, it should give you a good overview of the tool as a whole and all the instructions to get it up and running (Note that “Getting Started” is 3rd on the Table of Contents so if you’re reading the page and think “have I missed something?”, you havent).  
+
 It is also recommended that you download the TestCafe Studio IDE for this. I would recommend at least trying it: [4]  
+
 If not, then Visual Studio Code is a perfectly fine place for you to write your code.
 
 ## Setup 
 
 The way that you arrange your files within the project is up to you. If you have a look in the examples file in [3] then you can see that each example is set out slightly differently. However, if you were to look at the example project: [5]  
  it has a more object-oriented style with one folder containing page objects and one folder containing test classes.  
+ 
 When you create separate JavaScript files it is always a good idea to import/export to other files as you create and initialize them as it is an easy thing to forget to do further down the line.
 
 ## Writing Tests
@@ -44,6 +50,7 @@ fixture `Tests on the home page of the TrainLine website `
 ```
 
 After the fixture has been opened, you can then start writing your tests. The syntax for this is standard. This involves calling “async/await” functions so if this is something that you haven’t investigated them it will be worth looking into it now. More info can be found here: [6]  
+
 When you create an initialise a test, you set the title of the test as the first parameter and the function as the second. For example, if you wanted to run a test where there were 3 radio buttons, you clicked on them all one after the other and then checked that the final one you clicked on was the one that was check:
 
 ```
@@ -56,8 +63,9 @@ test('Radio Buttons Check', async t =>{
         .expect(homePage.openReturnRadioButton.checked).ok();
     })
 ```
-(N.B. the variables are initialized on another file that I have imported as “homepage”).
+(N.B. the variables are initialized on another file that I have imported as “homePage”).
 The using “expect” is a great way to generate an assertion and it can be deployed in several different ways. More information can be found here: [7]  
+
 If there is something a bit more specific that you wish to check and find that the expect feature doesn’t quite have the functionality that you require then you can look at installing expect.js: [8]  
 
 ## Using Selectors
@@ -86,6 +94,7 @@ N.B. if you wish to find an element by an id or a class but it contains syntacti
 ```const elementByIdAttribute = Selector("[id='strange.id']")```
 
 To find elements by more complicated selectors you can use a standard CSS selector chain, like one that you can copy from the dev tools (but never copy from dev tools!!!).  
+
 So, for example, if there were to be an element that was a list element contained in a list with a parent element with a unique id (e.g. id = “anotherElementId”) then you could select it by:
 
 ```const elementBySelectorChain = Selector('#anotherElementId > ul > li:nth-child([index])')```
@@ -103,6 +112,7 @@ To only run specific tests within the file then you can click the drop down by t
 ### Command Line
 
 Running the tests from a command prompt is as simple as declaring a “testcafe” operation, declaring the browser or browsers and then pointing it in the direction of the file containing the tests. To run a test suite called “homepage.js” in chrome navigate to the folder containing the file and enter “testcafe chrome hompage.js.  
+
 There are many specific cases where you would not just wish to plainly run all the tests of 1 file so please see the below link for a comprehensive look at the ways to use the command prompt to run your tests: [10]
 
 ## Different Browsers
