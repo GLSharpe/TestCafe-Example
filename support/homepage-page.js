@@ -1,4 +1,4 @@
-    import { Selector, t} from "testcafe";
+import { Selector, t} from "testcafe";
 
 export default class HomePage {
     constructor (){
@@ -40,7 +40,7 @@ export default class HomePage {
         this.enterToLocation(toLocation);
     }
 
-    //Method for exercise 3
+    //Method for exercise 3 (I know it’s a horrible way to go about it)
     async checkNextDateValid(){
         var validNextDay;
         const outBoundDate = await this.outBoundDateBar.getAttribute('value');
