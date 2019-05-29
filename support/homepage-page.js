@@ -34,16 +34,13 @@ export default class HomePage {
     //Validate Page method
     async validatePage(){
         await t
-        .expect(Selector("title").innerText).contains('Trainline');
-    await t
-        .expect(this.searchPageTitle.innerText)
-            .contains('Your search:');
-    await t
-        .expect(this.searchPageTitle.innerText)
-            .contains(this.fromText);
-    await t
-        .expect(this.searchPageTitle.innerText)
-            .contains(this.toText);
+            .expect(Selector("title").innerText).contains('Trainline');
+        await t
+            .expect(this.searchPageTitle.innerText).contains('Your search:');
+        await t
+            .expect(this.searchPageTitle.innerText).contains(this.fromText);
+        await t
+            .expect(this.searchPageTitle.innerText).contains(this.toText);
     }
 
     //Method for exercise 1.2

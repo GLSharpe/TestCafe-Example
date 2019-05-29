@@ -6,12 +6,14 @@ const homePage = new HomePage();
 fixture `Example tests`
     .page(homePage.baseUrl);
 
-test('1.1 Search for train time, check search page title', async t => {
+    test('1.1 Search for train time, check search page title', async t => {
     await t
         .typeText(homePage.fromLocation, homePage.fromText)
-        .click(homePage.suggestedStationFrom)
+        .click(homePage.suggestedStationFrom);
+    await t
         .typeText(homePage.toLocation, homePage.toText)
-        .click(homePage.suggestedStationTo)
+        .click(homePage.suggestedStationTo);
+    await t
         .click(homePage.submitButton);
     await t
         .expect(Selector("title").innerText).contains('Trainline');
@@ -24,6 +26,7 @@ test('1.1 Search for train time, check search page title', async t => {
     await t
         .expect(homePage.searchPageTitle.innerText)
             .contains(homePage.toText);
+
 } )
 
 test('1.2 Search for train time, check search page title', async t => {
