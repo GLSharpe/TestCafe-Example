@@ -107,7 +107,7 @@ There are many different ways to use Selectors and they can be found here: [9]
 
 To run tests for TestCafe studio just click the blue 'run' button next to the test file:  
 
-![testrun](https://user-images.githubusercontent.com/43884592/53645171-36620100-3c30-11e9-82a2-2fda774efcc4.png)
+![testrun](https://github.com/GLSharpe/TestCafe-Example/blob/master/support/images/testrun.png)
 
 To only run specific tests within the file then you can click the drop down by the file to display all the tests within it. You can then select specific tests to run, each of which will display the same run button when you hover over them.
 
