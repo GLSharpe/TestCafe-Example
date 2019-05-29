@@ -8,36 +8,43 @@ fixture `Example tests`
 
 test('1.1 Search for train time, check search page title', async t => {
     await t
-        .typeText(homePage.fromLocation, 'London Bridge')
+        .typeText(homePage.fromLocation, homePage.fromText)
         .click(homePage.suggestedStationFrom)
-        .typeText(homePage.toLocation, 'Brighton')
+        .typeText(homePage.toLocation, homePage.toText)
         .click(homePage.suggestedStationTo)
         .click(homePage.submitButton);
     await t
         .expect(Selector("title").innerText).contains('Trainline');
+    await t
+        .expect(homePage.searchPageTitle.innerText)
+            .contains('Your search:');
+    await t
+        .expect(homePage.searchPageTitle.innerText)
+            .contains(homePage.fromText);
+    await t
+        .expect(homePage.searchPageTitle.innerText)
+            .contains(homePage.toText);
 } )
 
 test('1.2 Search for train time, check search page title', async t => {
-    await homePage.enterFromLocation('London Bridge');
-    await homePage.enterToLocation('Brighton');
+    await homePage.enterFromLocation(homePage.fromText);
+    await homePage.enterToLocation(homePage.toText);
     await t
         .click(homePage.submitButton);
-    await t
-        .expect(Selector("title").innerText).contains('Trainline');
+    await homePage.validatePage();
 } )
 
 test('1.3 Search for train time, check search page title', async t => {
-    await homePage.enterLocations('London Bridge','Brighton');
+    await homePage.enterLocations(homePage.fromText,homePage.toText);
     await t
         .click(homePage.submitButton);
-    await t
-        .expect(Selector("title").innerText).contains('Trainline');
+    await homePage.validatePage();
 } )
 
 test('2. Check page title, search train times, check results shown', async t => {
     await t
         .expect(Selector("title").innerText).contains('Trainline');
-    await homePage.enterLocations('London Bridge','Brighton');
+    await homePage.enterLocations(homePage.fromText,homePage.toText);
     await t
         .click(homePage.submitButton);
     await t
@@ -45,7 +52,7 @@ test('2. Check page title, search train times, check results shown', async t => 
 })
 
 test('3. Checking you can search for return tickets', async t =>{
-    await homePage.enterLocations('London Bridge', 'Brighton');
+    await homePage.enterLocations(homePage.fromText,homePage.toText);
     await t
         .click(homePage.returnRadioButton)
         .click(homePage.tomorrowButton)

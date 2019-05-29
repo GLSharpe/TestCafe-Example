@@ -17,6 +17,10 @@ export default class HomePage {
         this.tomorrowButton = Selector("fieldset[data-test='outbound-datepicker']").child(1).child(1);
         this.outBoundDateBar = Selector("[id='page.journeySearchForm.outbound.title']");
         this.inBoundDateBar = Selector("[id='page.journeySearchForm.inbound.title']");
+        this.searchPageTitle= Selector("div._1c5dl1r > div > ul > li:nth-child(1) > span > span");
+
+        this.fromText = 'London Bridge';
+        this.toText = 'Brighton';
         
     }
 
@@ -25,6 +29,21 @@ export default class HomePage {
         await t
             .typeText(this.fromLocation, locationText)
             .click(this.suggestedStationFrom);       
+    }
+
+    //Validate Page method
+    async validatePage(){
+        await t
+        .expect(Selector("title").innerText).contains('Trainline');
+    await t
+        .expect(this.searchPageTitle.innerText)
+            .contains('Your search:');
+    await t
+        .expect(this.searchPageTitle.innerText)
+            .contains(this.fromText);
+    await t
+        .expect(this.searchPageTitle.innerText)
+            .contains(this.toText);
     }
 
     //Method for exercise 1.2
