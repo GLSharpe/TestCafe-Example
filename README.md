@@ -174,7 +174,6 @@ Create a test, titled whatever you like, that:
 * Enter the text “Brighton” into the To field and then picks the top option from the drop down.
 * Clicks on the “Get Times and Tickets” button.
 * Checks that the title of the next page contains the string “Trainline”.
-* Check also that the text below the title contains the phrase "Your search:" and both the names of the stations you are travelling between.
 
 Write this test linearly, one step after the other without creating any supporting methods.  
 (Hint available)
@@ -183,7 +182,7 @@ Write this test linearly, one step after the other without creating any supporti
 
 Create a test that does the same function as above, but this time create 3 supporting methods in the 'homepage.js' file that both receive 1 argument. One method should enter the argument into the From box and then picks the top option from the drop down. Call it “enterFromLocation”.  
 The second method should enter the argument into the To box and then picks the top option from the drop down. Call it “enterToLocation”.
-The third method should be a method containing all of the assersions.
+The third method should be a method containing assertion from 1.1 and also check that the text below the title contains the phrase "Your search:" and both the names of the stations you are travelling between.
 Use these methods in the test.  
 (Hint available)
 
