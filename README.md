@@ -207,7 +207,7 @@ The last point in fairly nonspecific, but if you were to find an element that we
 
 ### Ex 3 (Extention and JavaScript Practice)
 
-This exercise was added for people to practice JavaScript (maniuplating strings, comparing values etc.), so if you're already well practiced in JavaScript then this may not be as useful for you.
+This exercise was added for people to practice JavaScript (manipulating strings, comparing values etc.), so if you're already well practiced in JavaScript then this may not be as useful for you.
 
 Create a test, titled whatever you like, that:
 
