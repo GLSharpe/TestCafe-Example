@@ -9,24 +9,12 @@ fixture `Example tests`
     test('1.1 Search for train time, check search page title', async t => {
     await t
         .typeText(homePage.fromLocation, homePage.fromText)
-        .click(homePage.suggestedStationFrom);
-    await t
+        .click(homePage.suggestedStationFrom)
         .typeText(homePage.toLocation, homePage.toText)
-        .click(homePage.suggestedStationTo);
-    await t
-        .click(homePage.submitButton);
-    await t
-        .expect(Selector("title").innerText).contains('Trainline');
-    await t
-        .expect(homePage.searchPageTitle.innerText)
-            .contains('Your search:');
-    await t
-        .expect(homePage.searchPageTitle.innerText)
-            .contains(homePage.fromText);
-    await t
-        .expect(homePage.searchPageTitle.innerText)
-            .contains(homePage.toText);
-
+        .click(homePage.suggestedStationTo)
+        .click(homePage.submitButton)
+        .expect(Selector("title").innerText)
+            .contains('Trainline');
 } )
 
 test('1.2 Search for train time, check search page title', async t => {

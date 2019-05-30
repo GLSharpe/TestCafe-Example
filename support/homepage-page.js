@@ -31,6 +31,13 @@ export default class HomePage {
             .click(this.suggestedStationFrom);       
     }
 
+    //Method for exercise 1.2
+    async enterToLocation(locationText){
+        await t
+            .typeText(this.toLocation, locationText)
+            .click(this.suggestedStationTo);            
+    }
+    
     //Validate Page method
     async validatePage(){
         await t
@@ -41,13 +48,6 @@ export default class HomePage {
             .expect(this.searchPageTitle.innerText).contains(this.fromText);
         await t
             .expect(this.searchPageTitle.innerText).contains(this.toText);
-    }
-
-    //Method for exercise 1.2
-    async enterToLocation(locationText){
-        await t
-            .typeText(this.toLocation, locationText)
-            .click(this.suggestedStationTo);            
     }
 
     //Method for exercise 1.3
