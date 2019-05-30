@@ -207,6 +207,8 @@ The last point in fairly nonspecific, but if you were to find an element that we
 
 ### Ex 3 (Extention and JavaScript Practice)
 
+This exercise was added for people to practice JavaScript (maniuplating strings, comparing values etc.), so if you're already well practiced in JavaScript then this may not be as useful for you.
+
 Create a test, titled whatever you like, that:
 
 * Navigates to the webpage.
@@ -214,7 +216,9 @@ Create a test, titled whatever you like, that:
 * Clicks the “Return” radio button.
 * Clicks the “Tomorrow” button to set the out-bound date as tomorrow.
 * Clicks the “Next Day” button to set the in-bound date as the day after tomorrow.
-* Create a method in homepage.js that checks that the date displayed in the in-bound date field is truly the day after the date displayed in the out-bound field. Let this method return a Boolean value and expect this value to be returned as true. (You can change the setup around and put in different values to test your method).
+
+
+After that, create a method in homepage.js that checks that the date displayed in the in-bound date field is truly the day after the date displayed in the out-bound field. Let this method return a Boolean value and expect this value to be returned as true. (You can change the setup around and put in different values to test your method).
 
 ## Links
 
