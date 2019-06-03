@@ -76,7 +76,7 @@ To use the Selector feature you need to first use the import:
 
 at the top of each file you intend to use selectors on.
 
-For there, using simple selectors in TestCafe are very easy, if an element has an ID (e.g. id = “elementId”) or a unique class (e.g. class = “elementClass”) affixed to it it then it is simply a matter of declaring the variables as follows:
+From there, using simple selectors in TestCafe are very easy, if an element has an ID (e.g. id = “elementId”) or a unique class (e.g. class = “elementClass”) affixed to it, it is then simply a matter of declaring the variables as follows:
 
 ```
 const elementById = Selector('#elementId')
