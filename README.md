@@ -51,7 +51,7 @@ fixture `Tests on the home page of the TrainLine website `
 
 After the fixture has been opened, you can then start writing your tests. The syntax for this is standard. This involves calling “async/await” functions so if this is something that you haven’t investigated them it will be worth looking into it now. More info can be found here: [6]  
 
-When you create an initialise a test, you set the title of the test as the first parameter and the function as the second. For example, if you wanted to run a test where there were 3 radio buttons, you clicked on them all one after the other and then checked that the final one you clicked on was the one that was check:
+When you create and initialise a test, you set the title of the test as the first argument and the function as the second. For example, if you wanted to run a test where there were 3 radio buttons, you clicked on them all one after the other and then checked that the final one you clicked on was the one that was check:
 
 ```
 test('Radio Buttons Check', async t =>{
@@ -76,7 +76,7 @@ To use the Selector feature you need to first use the import:
 
 at the top of each file you intend to use selectors on.
 
-For there, using simple selectors in TestCafe are very easy, if an element has an ID (e.g. id = “elementId”) or a unique class (e.g. class = “elementClass”) affixed to it it then it is simply a matter of declaring the variables as follows:
+From there, using simple selectors in TestCafe are very easy, if an element has an ID (e.g. id = “elementId”) or a unique class (e.g. class = “elementClass”) affixed to it, it is then simply a matter of declaring the variables as follows:
 
 ```
 const elementById = Selector('#elementId')
@@ -207,6 +207,8 @@ The last point in fairly nonspecific, but if you were to find an element that we
 
 ### Ex 3 (Extention and JavaScript Practice)
 
+This exercise was added for people to practice JavaScript (manipulating strings, comparing values etc.), so if you're already well practiced in JavaScript then this may not be as useful for you.
+
 Create a test, titled whatever you like, that:
 
 * Navigates to the webpage.
@@ -214,7 +216,9 @@ Create a test, titled whatever you like, that:
 * Clicks the “Return” radio button.
 * Clicks the “Tomorrow” button to set the out-bound date as tomorrow.
 * Clicks the “Next Day” button to set the in-bound date as the day after tomorrow.
-* Create a method in homepage.js that checks that the date displayed in the in-bound date field is truly the day after the date displayed in the out-bound field. Let this method return a Boolean value and expect this value to be returned as true. (You can change the setup around and put in different values to test your method).
+
+
+After that, create a method in homepage.js that checks that the date displayed in the in-bound date field is truly the day after the date displayed in the out-bound field. Let this method return a Boolean value and expect this value to be returned as true. (You can change the setup around and put in different values to test your method).
 
 ## Links
 
