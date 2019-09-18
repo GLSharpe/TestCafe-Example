@@ -9,12 +9,12 @@ export default class HomePage {
         this.returnRadioButton = Selector('#return');
         this.openReturnRadioButton = Selector('#openReturn');
         this.returnDateBar = Selector("input[name='page.journeySearchForm.inbound.title']");
-        this.suggestedStationFrom = Selector('#stations_from  li:nth-child(1)');
+        this.suggestedStationFrom = Selector('#stations_from li:nth-child(1)');
         this.suggestedStationTo = Selector('#stations_to li:nth-child(1)');
         this.submitButton = Selector("button[data-test='submit-journey-search-button']");
         this.resultsPriceBar = Selector("div[data-test='train-results-container-OUTWARD']");
-        this.nextDayButton = Selector("fieldset[data-test='inbound-datepicker']").child(1).child(1);
-        this.tomorrowButton = Selector("fieldset[data-test='outbound-datepicker']").child(1).child(1);
+        this.nextDayButton = Selector("fieldset[data-test='inbound-datepicker'] button[data-test='datepicker-next-day-button']");
+        this.tomorrowButton = Selector("fieldset[data-test='outbound-datepicker'] button[data-test='datepicker-next-day-button]");
         this.outBoundDateBar = Selector("[id='page.journeySearchForm.outbound.title']");
         this.inBoundDateBar = Selector("[id='page.journeySearchForm.inbound.title']");
         this.searchPageTitle= Selector("span[data-test='change-journey-header']");
