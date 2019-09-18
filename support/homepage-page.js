@@ -4,20 +4,20 @@ export default class HomePage {
     constructor (){
         this.baseUrl = 'https://www.thetrainline.com/';
         this.fromLocation = Selector("[id='from.text']");
-        this.toLocation = Selector("[id='to.text'");
+        this.toLocation = Selector("[id='to.text']");
         this.oneWayRadioButton = Selector('#single');
         this.returnRadioButton = Selector('#return');
         this.openReturnRadioButton = Selector('#openReturn');
         this.returnDateBar = Selector("input[name='page.journeySearchForm.inbound.title']");
         this.suggestedStationFrom = Selector('#stations_from').child(0);
         this.suggestedStationTo = Selector('#stations_to').child(0);
-        this.submitButton = Selector("div[class='_11rhhtw']");
-        this.resultsPriceBar = Selector('._1wkwghh');
+        this.submitButton = Selector("button[data-test='submit-journey-search-button']");
+        this.resultsPriceBar = Selector("div[data-test='train-results-container-OUTWARD']");
         this.nextDayButton = Selector("fieldset[data-test='inbound-datepicker']").child(1).child(1);
         this.tomorrowButton = Selector("fieldset[data-test='outbound-datepicker']").child(1).child(1);
         this.outBoundDateBar = Selector("[id='page.journeySearchForm.outbound.title']");
         this.inBoundDateBar = Selector("[id='page.journeySearchForm.inbound.title']");
-        this.searchPageTitle= Selector("div._1c5dl1r > div > ul > li:nth-child(1) > span > span");
+        this.searchPageTitle= Selector("span[data-test='change-journey-header']");
 
         this.fromText = 'London Bridge';
         this.toText = 'Brighton';
