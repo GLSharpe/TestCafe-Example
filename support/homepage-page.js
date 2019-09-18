@@ -3,14 +3,14 @@ import { Selector, t} from "testcafe";
 export default class HomePage {
     constructor (){
         this.baseUrl = 'https://www.thetrainline.com/';
-        this.fromLocation = Selector("[id='from.text']");
+        this.fromLocation = Selector("[id='from.text'] ");
         this.toLocation = Selector("[id='to.text']");
         this.oneWayRadioButton = Selector('#single');
         this.returnRadioButton = Selector('#return');
         this.openReturnRadioButton = Selector('#openReturn');
         this.returnDateBar = Selector("input[name='page.journeySearchForm.inbound.title']");
-        this.suggestedStationFrom = Selector('#stations_from').child(0);
-        this.suggestedStationTo = Selector('#stations_to').child(0);
+        this.suggestedStationFrom = Selector('#stations_from  li:nth-child(1)');
+        this.suggestedStationTo = Selector('#stations_to li:nth-child(1)');
         this.submitButton = Selector("button[data-test='submit-journey-search-button']");
         this.resultsPriceBar = Selector("div[data-test='train-results-container-OUTWARD']");
         this.nextDayButton = Selector("fieldset[data-test='inbound-datepicker']").child(1).child(1);
